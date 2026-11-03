@@ -4,10 +4,10 @@
 Program realizuje dwuwymiarową grę platformową z interfejsem graficznym (WinAPI GDI) oraz diagnostycznym interfejsem konsolowym. Projekt został podzielony na moduły nagłówkowe (`.h`) oraz implementacyjne (`.cpp`):
 
 * **`grafika.h` / `grafika.cpp`**:
-  * `Platforma` – klasa bazowa reprezentująca obiekt platformy na mapie (tekstury i ich położenie `.bmp`).
-  * `PlatformaZwykla` – klasa pochodna reprezentująca statyczną platformę o standardowym odbiciu (`x1.0`).
-  * `PlatformaSprezysta` – klasa pochodna reprezentująca ruchomą trampolinę poruszającą się w poziomie i zwiększającą siłę skoku gracza (`x1.35`).
-  * `SwiatGrafiki` – klasa zarządzająca warstwami renderowania (stałe tło, polimorficzny wektor platform, gracz, UI) oraz operacjami CRUD (dodawanie, usuwanie, wyszukiwanie, modyfikacja platform).
+  * `Plat` – klasa bazowa reprezentująca obiekt platformy na mapie (tekstury i ich położenie `.bmp`).
+  * Platforma podstawowa `Plat_pods` – klasa pochodna reprezentująca statyczną platformę o standardowym odbiciu (`x1.0`).
+  * Platforma specjalna `Plat_spec_` – klasa pochodna reprezentująca ruchomą trampolinę poruszającą się w poziomie i zwiększającą siłę skoku gracza (`x1.35`).
+  * Swiat gry `Sw_gry` – klasa zarządzająca warstwami renderowania (stałe tło, platformy, gracz, UI) oraz operacjami CRUD (dodawanie, usuwanie, wyszukiwanie, modyfikacja platform).
 * **`ruch.h` / `ruch.cpp`**:
   * `Gracz` – klasa odpowiadająca za fizykę postaci (grawitacja, skok, ruch poziomy), detekcję kolizji AABB z platformami, odradzanie na pierwszej platformie oraz system żyć.
 * **`main.cpp`**:
